@@ -1,0 +1,22 @@
+.moving-mouse-holder {
+    margin: auto;
+    margin-top: 60px;
+    width: 170px;
+}
+
+.moving-mouse-holder .mouse-button {
+    width: 4px;
+    height: 10px;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin: 0 0 0 -2px;
+    animation: mouse-scroll 1s infinite alternate;
+}
+
+@keyframes mouse-scroll {
+    to {
+        transform: translate(0, 6px) scale(1, 0.8);
+    }
+}

@@ -8,12 +8,7 @@ import PROJ_INTEGRATIVE_POSTER from "../assets/images/Integrative-Poster.jpg";
 import PROJ_RELATIONAL_DB_GUI_POSTER from "../assets/images/Relational-DB-GUI-Poster.jpg";
 import PROJ_OPENGL_POSTER from "../assets/images/OpenGL-Poster.jpg";
 import PROJ_ZOO_MANAGEMENT_POSTER from "../assets/images/Zoo-Management-Poster.jpg";
-// import PROJ_POKERZONE_PREVIEW from "../assets/videos/PokerZone-Preview.mp4";
-// import PROJ_FPS_PREVIEW from "../assets/videos/FPS-Preview.mp4";
-// import PROJ_INTEGRATIVE_PREVIEW from "../assets/videos/Integrative-Preview.mp4";
-// import PROJ_RELATIONAL_DB_GUI_PREVIEW from "../assets/videos/Relational-DB-GUI-Preview.mp4";
-// import PROJ_OPENGL_PREVIEW from "../assets/videos/OpenGL-Preview.mp4";
-// import PROJ_ZOO_MANAGEMENT_PREVIEW from "../assets/videos/Zoo-Management-Preview.mp4";
+
 import {
   FIRST_NAME,
   LAST_NAME,

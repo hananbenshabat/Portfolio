@@ -39,32 +39,52 @@ const Hero: React.FC<HeroProps> = ({
             animate={{ scale: [0.5, 1] }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="mb-5 text-5xl font-bold tracking-tighter">
-              {greetingText}
-            </h1>
-            <p className="mb-5">
-              {greetingDescription + ", " + CITY + ", " + COUNTRY + "."}
-            </p>
-            <a
-              className="transition rounded-full cursor-pointer btn btn-primary mr-5"
-              href={CV_URL}
-              download="hanan-ben-shabat-cv.pdf"
-            >
-              <ArrowCircleDownIcon className="w-5 h-5 mr-2" />
-              {buttonText}
-            </a>
-            <button
-              className="transition rounded-full cursor-pointer btn btn-primary mr-5"
-              onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}
-            >
-              <LinkedInIcon className="w-5 h-5" />
-            </button>
-            <button
-              className="transition rounded-full cursor-pointer btn btn-primary"
-              onClick={() => GeneralFunctions.openInNewTab(GITHUB)}
-            >
-              <GitHubIcon className="w-5 h-5" />
-            </button>
+            <div className="hidden lg:block">
+              <h1 className="mb-5 text-5xl font-bold tracking-tighter">
+                {greetingText}
+              </h1>
+              <p className="mb-5">
+                {greetingDescription + ", " + CITY + ", " + COUNTRY + "."}
+              </p>
+              <a
+                className="transition rounded-full cursor-pointer btn btn-primary mr-5"
+                href={CV_URL}
+                download="hanan-ben-shabat-cv.pdf"
+              >
+                <ArrowCircleDownIcon className="w-5 h-5 mr-2" />
+                {buttonText}
+              </a>
+              <button
+                className="transition rounded-full cursor-pointer btn btn-primary mr-5"
+                onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}
+              >
+                <LinkedInIcon className="w-5 h-5" />
+              </button>
+              <button
+                className="transition rounded-full cursor-pointer btn btn-primary"
+                onClick={() => GeneralFunctions.openInNewTab(GITHUB)}
+              >
+                <GitHubIcon className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="lg:hidden">
+              <h1 className="mb-5 text-4xl font-bold tracking-tighter">
+                {greetingText}
+              </h1>
+              <p className="mb-5">
+                <span className="text-xl">{greetingDescription}</span>
+                <br />
+                {CITY + ", " + COUNTRY}
+              </p>
+              <a
+                className="transition rounded-full cursor-pointer btn btn-primary"
+                href={CV_URL}
+                download="hanan-ben-shabat-cv.pdf"
+              >
+                <ArrowCircleDownIcon className="w-5 h-5 mr-2" />
+                {buttonText}
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>

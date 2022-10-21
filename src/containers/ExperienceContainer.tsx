@@ -11,7 +11,7 @@ const ExperienceContainer: React.FC = () => {
       <br />
       <Heading heading={SECTIONS[1]} />
       <div className="relative h-full p-10 overflow-hidden wrap">
-        <div className="absolute h-full border border-accent border-2-2 border-opacity-20 left-1/2 " />
+        <div className="absolute h-full border border-accent border-2-2 border-opacity-20 left-1/2 hidden lg:block" />
 
         {EXPERIENCE.map(
           ({ id, company, position, description, end, start, logo }) => (

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import AnimateVisible from "../utils/AnimateVisible";
 import Heading from "../components/Heading";
@@ -15,12 +15,22 @@ import {
   EMAILJS_PUBLIC_KEY,
 } from "../data/data";
 import GeneralFunctions from "../utils/GeneralFunctions";
+import ContactSubmit from "./ContactSubmit";
 
 const Contact = () => {
+  const [submitOutput, setSubmitOutput] = useState(<ContactSubmit />);
+  const [isSendingOutput, setIsSendingOutput] = useState(false);
   const form = useRef();
 
-  const sendEmail = (e: { preventDefault: () => void }) => {
+  const sendEmail = (e: {
+    preventDefault: () => void;
+    target: { reset: () => void };
+  }) => {
     e.preventDefault();
+    e.target.reset();
+
+    setIsSendingOutput(true);
+    setSubmitOutput(<ContactSubmit type="info" message="Sending..." />);
 
     emailjs
       .sendForm(
@@ -31,11 +41,20 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("message sent");
+          setSubmitOutput(
+            result.text === "OK" ? (
+              <ContactSubmit type="success" message="Thanks!😁" />
+            ) : (
+              <ContactSubmit type="success" message={result.text} />
+            )
+          );
+
+          setIsSendingOutput(false);
         },
         (error) => {
-          console.log(error.text);
+          setSubmitOutput(<ContactSubmit type="error" message={error.text} />);
+
+          setIsSendingOutput(false);
         }
       );
   };
@@ -70,7 +89,7 @@ const Contact = () => {
               action="#"
               className="space-y-8 my-5"
               ref={form}
-              onSubmit={sendEmail}
+              onSubmit={sendEmail.bind(this)}
             >
               <div>
                 <label htmlFor="email" className="card-title font-bold mb-2">
@@ -108,10 +127,12 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="transition rounded-full cursor-pointer btn glass btn-primary font-bold"
+                className="transition rounded-full cursor-pointer btn glass btn-primary font-bold mb-2"
+                disabled={isSendingOutput}
               >
                 Submit
               </button>
+              {submitOutput}
             </form>
           </div>
         </div>

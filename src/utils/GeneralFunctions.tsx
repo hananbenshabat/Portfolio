@@ -32,6 +32,14 @@ const GeneralFunctions = {
   openInNewTab: function (url: string | URL) {
     window.open(url, "_blank", "noopener,noreferrer");
   },
+
+  getCurrentDate: function (): string {
+    var today: Date = new Date();
+    var year: number = today.getFullYear();
+    var month: number = today.getMonth() + 1;
+
+    return (month < 10 ? "0" + month : month) + "/" + year;
+  },
 };
 
 export default GeneralFunctions;

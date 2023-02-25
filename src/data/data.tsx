@@ -1,7 +1,8 @@
 import Image from "../assets/images/Social.jpg";
 import Military from "../assets/images/Military.jpg";
 import Education from "../assets/images/Afeka.jpg";
-import CV from "../assets/documents/CV.pdf";
+import ForecastIcon from "../assets/icons/4cast.svg";
+import CV from "../assets/documents/PDF/hanan_ben_shabat_cv_en.pdf";
 import PROJ_POKERZONE_POSTER from "../assets/images/PokerZone-Poster.jpg";
 import PROJ_FPS_POSTER from "../assets/images/FPS-Poster.jpg";
 import PROJ_INTEGRATIVE_POSTER from "../assets/images/Integrative-Poster.jpg";
@@ -27,6 +28,7 @@ import {
   PROJ_OPENGL_YOUTUBE,
   PROJ_ZOO_MANAGEMENT_YOUTUBE,
 } from "./secretData";
+
 import GeneralFunctions from "../utils/GeneralFunctions";
 
 import {
@@ -83,7 +85,8 @@ export const EXPERIENCE: TimelineProps[] = [
     logo: Military,
     start: "2015",
     end: "2018",
-    description: "Developed client side in Angular and server side in .Net.",
+    description:
+      "Developed client side in Angular and server side in Microsoft SQL Server and .NET.",
   },
   {
     id: 2,
@@ -93,6 +96,16 @@ export const EXPERIENCE: TimelineProps[] = [
     start: "2018",
     end: "2022",
     description: "Major in Software and Information Technology.",
+  },
+  {
+    id: 3,
+    company: "4cast, Malam Team",
+    position: "Full-Stack Engineer",
+    logo: ForecastIcon,
+    start: "02/2023",
+    end: GeneralFunctions.getCurrentDate(),
+    description:
+      "Developed decision intelligence platform. Client side in Angular and server side in PostgreSQL and .NET Core.",
   },
 ];
 
@@ -158,12 +171,12 @@ export const skills: SkillsProps[] = [
   {
     id: 10,
     skill: "React, React WebGL, Redux",
-    level: 90,
+    level: 80,
   },
   {
     id: 11,
     skill: "Angular",
-    level: 60,
+    level: 95,
   },
   {
     id: 12,

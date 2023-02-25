@@ -41,6 +41,11 @@ export type HeadingProps = {
   illustration?: unknown;
 };
 
+export type ContactSubmitProps = {
+  type?: string;
+  message?: string;
+};
+
 export type HeroProps = {
   greetingText: string;
   greetingDescription: string;

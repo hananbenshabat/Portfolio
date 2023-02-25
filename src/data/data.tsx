@@ -105,7 +105,7 @@ export const EXPERIENCE: TimelineProps[] = [
     start: "02/2023",
     end: GeneralFunctions.getCurrentDate(),
     description:
-      "Developed decision intelligence platform. Client side in Angular and server side in PostgreSQL and .NET Core.",
+      "Developed decision intelligence platform. Client side in Angular and server side in PostgreSQL and .NET.",
   },
 ];
 

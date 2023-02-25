@@ -67,7 +67,7 @@ export const MENU: MenuProps[] = [
   { id: 5, route: "contact", name: SECTIONS[4] },
 ];
 
-export const EDUCATION = "Software engineering graduate";
+export const TITLE = "Full-Stack Engineer";
 
 export {
   CITY,

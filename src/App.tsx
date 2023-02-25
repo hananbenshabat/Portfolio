@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Seo from "./components/Seo";
 import HomeContainer from "./containers/HomeContainer";
 import { ThemeContext, ThemeContextProps } from "./context/ThemeProvider";
-import { EDUCATION, IMAGE, KEYWORDS, NAME, URL } from "./data/data";
+import { TITLE, IMAGE, KEYWORDS, NAME, URL } from "./data/data";
 
 function App() {
   const [Theme, setTheme] = useState("light");
@@ -15,7 +15,7 @@ function App() {
       <Seo
         url={URL}
         lang="en"
-        metaDescription={EDUCATION}
+        metaDescription={TITLE}
         keywords={KEYWORDS}
         image={IMAGE}
         title={NAME(" ")}

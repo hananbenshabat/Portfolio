@@ -30,7 +30,7 @@ const Contact = () => {
     e.target.reset();
 
     setIsSendingOutput(true);
-    setSubmitOutput(<ContactSubmit type="info" message="Sending..." />);
+    setSubmitOutput(<ContactSubmit type="alert-info" message="Sending..." />);
 
     emailjs
       .sendForm(
@@ -43,16 +43,18 @@ const Contact = () => {
         (result) => {
           setSubmitOutput(
             result.text === "OK" ? (
-              <ContactSubmit type="success" message="Thanks!😁" />
+              <ContactSubmit type="alert-success" message="Thanks!😁" />
             ) : (
-              <ContactSubmit type="success" message={result.text} />
+              <ContactSubmit type="alert-success" message={result.text} />
             )
           );
 
           setIsSendingOutput(false);
         },
         (error) => {
-          setSubmitOutput(<ContactSubmit type="error" message={error.text} />);
+          setSubmitOutput(
+            <ContactSubmit type="alert-error" message={error.text} />
+          );
 
           setIsSendingOutput(false);
         }

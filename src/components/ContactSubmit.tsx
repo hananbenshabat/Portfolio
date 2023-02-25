@@ -3,16 +3,14 @@ import { ContactSubmitProps } from "../types/types";
 
 const ContactSubmit: React.FC<ContactSubmitProps> = ({ type, message }) => {
   switch (type) {
-    case "info":
-    case "success":
-    case "error":
+    case "alert-info":
+    case "alert-success":
+    case "alert-error":
       return (
         <div className="relative inline-block pl-5">
           <div
             className={`${
-              `alert alert-` +
-              type +
-              ` font-bold h-5 max-w-content justify-center`
+              `alert ` + type + ` font-bold h-5 max-w-content justify-center`
             }`}
           >
             <label>{message}</label>

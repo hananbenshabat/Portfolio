@@ -27,7 +27,6 @@ const Contact = () => {
     target: { reset: () => void };
   }) => {
     e.preventDefault();
-    e.target.reset();
 
     setIsSendingOutput(true);
     setSubmitOutput(<ContactSubmit type="alert-info" message="Sending..." />);
@@ -59,6 +58,8 @@ const Contact = () => {
           setIsSendingOutput(false);
         }
       );
+
+    e.target.reset();
   };
 
   return (

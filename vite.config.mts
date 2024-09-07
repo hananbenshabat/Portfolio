@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
+    build: { emptyOutDir: false },
     plugins: [react(), tsconfigPaths(), svgr()],
     css: { postcss: { plugins: [tailwindcss()] } }
 });

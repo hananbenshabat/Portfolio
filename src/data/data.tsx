@@ -59,7 +59,7 @@ export const MENU: MenuProps[] = [
 
 export const TITLE = 'Full-Stack Engineer';
 
-export { CITY, COUNTRY, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from './secret-data';
+export { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from './secret-data';
 
 export const EXPERIENCE: TimelineProps[] = [
     {

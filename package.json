@@ -2,7 +2,7 @@
     "name": "hanan-ben-shabat-cv",
     "version": "0.1.0",
     "dependencies": {
-        "@craco/craco": "^7.0.0",
+        "@craco/craco": "^7.1.0",
         "@emailjs/browser": "^3.10.0",
         "@heroicons/react": "^2.0.16",
         "@tailwindcss/typography": "^0.5.9",

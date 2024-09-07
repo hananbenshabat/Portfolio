@@ -2,7 +2,7 @@ import '@vime/core/themes/default.css';
 import { DefaultUi, Player, Provider, Youtube } from '@vime/react';
 import { motion } from 'framer-motion';
 import React, { useRef } from 'react';
-import { ReactComponent as LinkIcon } from '../assets/icons/link.svg';
+import LinkIcon from '../assets/icons/svg/link.svg';
 import { ProjectCardProps } from '../types/types';
 import GeneralFunctions from '../utils/general-functions';
 import TapSidesToSeek from './tap-sides-to-seek';
@@ -43,12 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         currentPoster={projectImageLogo}
                         currentProvider={Provider.YouTube}
                         playbackQuality={'1080p'}>
-                        <Youtube
-                            videoId={video}
-                            cookies={true}
-                            poster={projectImageLogo}
-                            showFullscreenControl={false}
-                        />
+                        <Youtube videoId={video} poster={projectImageLogo} showFullscreenControl={false} />
                         <DefaultUi noCaptions noSettings>
                             <TapSidesToSeek />
                         </DefaultUi>
@@ -61,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                             <button
                                 className="btn btn-ghost rounded-full"
                                 onClick={() => GeneralFunctions.openInNewTab(link)}>
-                                <LinkIcon className="w-5 h-5" />
+                                <img className="w-5 h-5" src={LinkIcon} />
                             </button>
                         </div>
                     </h2>

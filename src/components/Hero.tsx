@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Link } from 'react-scroll';
-import { ReactComponent as ArrowCircleDownIcon } from '../assets/icons/download.svg';
-import { ReactComponent as GitHubIcon } from '../assets/icons/github.svg';
-import { ReactComponent as LinkedInIcon } from '../assets/icons/linkedin.svg';
+import ArrowCircleDownIcon from '../assets/icons/svg/download.svg';
+import GitHubIcon from '../assets/icons/svg/github.svg';
+import LinkedInIcon from '../assets/icons/svg/linkedin.svg';
 import { CITY, COUNTRY, CV_URL, GITHUB, LINKEDIN } from '../data/data';
-import '../mouse.css';
+import '../styles/mouse.css';
 import { HeroProps } from '../types/types';
 import GeneralFunctions from '../utils/general-functions';
 
@@ -37,18 +37,33 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
                                 className="transition rounded-full cursor-pointer btn btn-primary mr-5"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
-                                <ArrowCircleDownIcon className="w-5 h-5 mr-2" />
+                                <span
+                                    className="i-mask w-5 h-5"
+                                    style={{
+                                        maskImage: `url(${ArrowCircleDownIcon})`,
+                                        WebkitMaskImage: `url(${ArrowCircleDownIcon})`
+                                    }}></span>
                                 {buttonText}
                             </a>
                             <button
-                                className="transition rounded-full cursor-pointer btn btn-primary mr-5"
+                                className="transition rounded-full cursor-pointer btn btn-primary ml-2 mr-5"
                                 onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
-                                <LinkedInIcon className="w-5 h-5" />
+                                <span
+                                    className="i-mask w-5 h-5"
+                                    style={{
+                                        maskImage: `url(${LinkedInIcon})`,
+                                        WebkitMaskImage: `url(${LinkedInIcon})`
+                                    }}></span>
                             </button>
                             <button
                                 className="transition rounded-full cursor-pointer btn btn-primary"
                                 onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                                <GitHubIcon className="w-5 h-5" />
+                                <span
+                                    className="i-mask w-5 h-5"
+                                    style={{
+                                        maskImage: `url(${GitHubIcon})`,
+                                        WebkitMaskImage: `url(${GitHubIcon})`
+                                    }}></span>
                             </button>
                         </div>
                         <div className="lg:hidden">
@@ -59,10 +74,15 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
                                 {CITY + ', ' + COUNTRY}
                             </p>
                             <a
-                                className="transition rounded-full cursor-pointer btn btn-primary"
+                                className="transition rounded-full cursor-pointer btn btn-primary mr-2"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
-                                <ArrowCircleDownIcon className="w-5 h-5 mr-2" />
+                                <span
+                                    className="i-mask w-5 h-5"
+                                    style={{
+                                        maskImage: `url(${ArrowCircleDownIcon})`,
+                                        WebkitMaskImage: `url(${ArrowCircleDownIcon})`
+                                    }}></span>
                                 {buttonText}
                             </a>
                         </div>

@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
-import { ReactComponent as EMailIcon } from '../assets/icons/email.svg';
-import { ReactComponent as WhatsAppIcon } from '../assets/icons/whatsapp.svg';
+import EMailIcon from '../assets/icons/svg/email.svg';
+import WhatsAppIcon from '../assets/icons/svg/whatsapp.svg';
 import {
     EMAIL,
     EMAIL_URL,
@@ -67,15 +67,15 @@ const Contact = () => {
                     <br />
                     <br />
                     <button
-                        className="transition rounded-full cursor-pointer btn btn-primary m-2 lowercase"
+                        className="transition rounded-full cursor-pointer btn btn-primary  my-2 ml-2 mr-3 lowercase"
                         onClick={() => GeneralFunctions.openInNewTab(EMAIL)}>
-                        <EMailIcon className="w-5 h-5 mr-2" />
+                        <img className="w-5 h-5" src={EMailIcon} />
                         {EMAIL_URL}
                     </button>
                     <button
-                        className="transition rounded-full cursor-pointer btn btn-primary m-2"
+                        className="transition rounded-full cursor-pointer btn btn-primary my-2 ml-2 mr-3"
                         onClick={() => GeneralFunctions.openInNewTab(WHATSAPP)}>
-                        <WhatsAppIcon className="w-5 h-5 mr-2" />
+                        <img className="w-5 h-5" src={WhatsAppIcon} />
                         {PHONE}
                     </button>
                     <br />

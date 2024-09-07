@@ -4,48 +4,28 @@
     "dependencies": {
         "@emailjs/browser": "^4.4.1",
         "@heroicons/react": "^2.1.5",
+        "@svgr/webpack": "^8.1.0",
         "@tailwindcss/typography": "^0.5.15",
-        "@testing-library/jest-dom": "^6.5.0",
-        "@testing-library/react": "^16.0.1",
-        "@testing-library/user-event": "^14.5.2",
-        "@types/node": "^22.5.4",
-        "@types/react": "^18.3.5",
-        "@types/react-dom": "^18.3.0",
-        "@types/react-helmet": "^6.1.11",
-        "@types/react-scroll": "^1.8.10",
         "@vime/core": "^5.4.1",
         "@vime/react": "^5.4.1",
-        "ajv": "^8.17.1",
-        "autoprefixer": "^10.4.20",
-        "daisyui": "^4.12.10",
         "dotenv-webpack": "^8.1.0",
         "framer-motion": "^11.5.4",
-        "postcss": "^8",
         "postcss-cli": "^11.0.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-helmet": "^6.1.0",
         "react-intersection-observer": "^9.13.1",
-        "react-scripts": "^5.0.1",
         "react-scroll": "^1.9.0",
-        "tailwindcss": "^3.4.10",
         "typescript": "^5.5.4",
-        "web-vitals": "^4.2.3"
+        "vite-plugin-svgr": "^4.2.0"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "eject": "react-scripts eject",
-        "test": "react-scripts test",
+        "start": "vite --port=3000",
+        "build": "tsc -b && vite build",
+        "preview": "vite preview",
         "format": "prettier --write ."
     },
     "homepage": "https://hanan-ben-shabat-cv.azurewebsites.net",
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
     "browserslist": {
         "production": [
             ">0.2%",
@@ -60,7 +40,18 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+        "@types/node": "^22.5.4",
+        "@types/react": "^18.3.5",
+        "@types/react-dom": "^18.3.0",
+        "@types/react-helmet": "^6.1.11",
+        "@types/react-scroll": "^1.8.10",
+        "@vitejs/plugin-react": "^4.3.1",
+        "autoprefixer": "^10.4.20",
+        "daisyui": "3.9.4",
+        "postcss": "^8.4.45",
         "prettier": "^3.3.3",
-        "prettier-plugin-sort-json": "^4.0.0"
+        "prettier-plugin-sort-json": "^4.0.0",
+        "tailwindcss": "^3.3.3",
+        "vite": "^5.4.3"
     }
 }

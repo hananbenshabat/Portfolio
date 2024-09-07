@@ -1,14 +1,14 @@
 import CV from '../assets/documents/pdf/hanan_ben_shabat_cv_en.pdf';
-import ForecastIcon from '../assets/icons/4cast.svg';
-import Education from '../assets/images/afeka.jpg';
-import PROJ_FPS_POSTER from '../assets/images/fps-poster.jpg';
-import PROJ_INTEGRATIVE_POSTER from '../assets/images/integrative-poster.jpg';
-import Military from '../assets/images/military.jpg';
-import PROJ_OPENGL_POSTER from '../assets/images/opengl-poster.jpg';
-import PROJ_POKERZONE_POSTER from '../assets/images/pokerzone-poster.jpg';
-import PROJ_RELATIONAL_DB_GUI_POSTER from '../assets/images/relational-db-gui-poster.jpg';
-import Image from '../assets/images/social.jpg';
-import PROJ_ZOO_MANAGEMENT_POSTER from '../assets/images/zoo-management-poster.jpg';
+import Education from '../assets/icons/jpg/afeka.jpg';
+import PROJ_FPS_POSTER from '../assets/icons/jpg/fps-poster.jpg';
+import PROJ_INTEGRATIVE_POSTER from '../assets/icons/jpg/integrative-poster.jpg';
+import Military from '../assets/icons/jpg/military.jpg';
+import PROJ_OPENGL_POSTER from '../assets/icons/jpg/opengl-poster.jpg';
+import PROJ_POKERZONE_POSTER from '../assets/icons/jpg/pokerzone-poster.jpg';
+import PROJ_RELATIONAL_DB_GUI_POSTER from '../assets/icons/jpg/relational-db-gui-poster.jpg';
+import Image from '../assets/icons/jpg/social.jpg';
+import PROJ_ZOO_MANAGEMENT_POSTER from '../assets/icons/jpg/zoo-management-poster.jpg';
+import ForecastIcon from '../assets/icons/svg/4cast.svg';
 import { ImageType, MenuProps, ProjectCardProps, SkillsProps, TimelineProps } from '../types/types';
 import GeneralFunctions from '../utils/general-functions';
 import {
@@ -94,11 +94,7 @@ export const EXPERIENCE: TimelineProps[] = [
 
 export const KEYWORDS = ['Developer', 'Software Engineer', 'Hanan Ben Shabat', 'Portfolio'];
 
-export const IMAGE: ImageType = {
-    src: Image,
-    height: '600',
-    width: '314'
-};
+export const IMAGE: ImageType = { src: Image, height: '600', width: '314' };
 
 export const skills: SkillsProps[] = [
     { id: 1, skill: 'Unity', level: 98 },

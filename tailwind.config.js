@@ -1,5 +1,9 @@
+import typography from '@tailwindcss/typography';
+import daisyui from 'daisyui';
+
 module.exports = {
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
     theme: { extend: {} },
-    plugins: [require('@tailwindcss/typography'), require('daisyui')]
+    daisyui: { themes: ['winter', 'night'], darkTheme: 'night' },
+    plugins: [daisyui, typography]
 };

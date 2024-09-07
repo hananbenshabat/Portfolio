@@ -17,5 +17,6 @@
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
+    "files.associations": { "*.css": "tailwindcss" },
     "px-to-rem.number-of-decimals-digits": 3
 }

@@ -7,11 +7,13 @@ export type TimelineProps = {
     end: string;
     description: string;
 };
+
 type ImageType = {
     src: string;
     width: string;
     height: string;
 };
+
 export type SEOProps = {
     lang: string;
     url: string;
@@ -53,7 +55,7 @@ export type HeroProps = {
 };
 
 export type NavbarProps = {
-    menuShow: unknown;
+    menuShow: boolean;
     showMenu: (e: boolean) => void;
 };
 export type ProjectCardProps = {

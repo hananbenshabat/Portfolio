@@ -6,7 +6,7 @@ import { ThemeContext, ThemeContextProps } from './context/theme-provider';
 import { IMAGE, KEYWORDS, NAME, TITLE, URL } from './data/data';
 
 function App() {
-    const [Theme, setTheme] = useState('light');
+    const [Theme, setTheme] = useState('winter');
     const value: ThemeContextProps = { theme: Theme, setTheme };
     const [menuShow, showMenu] = useState(false);
 

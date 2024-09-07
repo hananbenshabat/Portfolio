@@ -1,0 +1,11 @@
+.i-mask {
+    background: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: var(--dyn-img);
+    -webkit-mask-image: var(--dyn-img);
+}

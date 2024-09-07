@@ -5,6 +5,8 @@ import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
     base: '/src/',
+    build: { outDir: 'dist' },
+    publicDir: 'public',
     plugins: [react(), svgr()],
     css: { postcss: { plugins: [tailwindcss()] } }
 });

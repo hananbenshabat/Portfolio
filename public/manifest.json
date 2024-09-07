@@ -1,7 +1,8 @@
 {
-    "short_name": "Portfolio",
-    "name": "Hanan Ben Shabat - CV",
-    "icons": [{
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
             "src": "favicon.ico",
             "sizes": "64x64 32x32 24x24 16x16",
             "type": "image/x-icon"
@@ -17,8 +18,8 @@
             "sizes": "512x512"
         }
     ],
+    "name": "Hanan Ben Shabat - CV",
+    "short_name": "Portfolio",
     "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+    "theme_color": "#000000"
 }

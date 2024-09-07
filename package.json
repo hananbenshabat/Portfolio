@@ -35,7 +35,8 @@
         "start": "craco start",
         "build": "craco build",
         "test": "craco test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "format": "prettier --write ."
     },
     "homepage": "https://hanan-ben-shabat-cv.azurewebsites.net",
     "eslintConfig": {
@@ -55,5 +56,9 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-sort-json": "^4.0.0"
     }
 }

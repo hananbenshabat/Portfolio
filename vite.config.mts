@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-    base: 'src',
+    base: '/src/',
     plugins: [react(), svgr()],
     css: { postcss: { plugins: [tailwindcss()] } }
 });

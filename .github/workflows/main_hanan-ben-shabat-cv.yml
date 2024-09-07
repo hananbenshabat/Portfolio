@@ -5,7 +5,8 @@ name: Build and deploy Node.js app to Azure Web App - hanan-ben-shabat-cv
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:

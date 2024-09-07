@@ -4,9 +4,10 @@ import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-    base: '/src/',
-    build: { outDir: 'dist' },
-    publicDir: 'public',
     plugins: [react(), svgr()],
-    css: { postcss: { plugins: [tailwindcss()] } }
+    css: { postcss: { plugins: [tailwindcss()] } },
+    esbuild: {
+        jsxFactory: 'React.createElement',
+        jsxFragment: 'React.Fragment'
+    }
 });

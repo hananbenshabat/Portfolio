@@ -33,11 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
     };
 
     useEffect(() => {
-        if (themeState) {
-            setTheme('winter');
-        } else {
-            setTheme('night');
-        }
+        setTheme(themeState ? 'winter' : 'night');
     }, [themeState]);
 
     useEffect(() => {
@@ -49,80 +45,74 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
     }, [scrollState]);
 
     return (
-        <>
-            <div
-                className={`${
-                    scrollState
-                        ? `inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out border-b border-transparent bg-primary text-primary-content fixed navbar`
-                        : `fixed inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out bg-transparent border-b border-transparent text-primary-content navbar`
-                }`}>
-                <div className="flex-1 navbar-start">
-                    <div
-                        className="btn btn-ghost rounded-btn"
-                        onClick={() => {
-                            setThemeState(!themeState);
-                        }}>
-                        {themeState ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
-                    </div>
-
-                    <div className="btn btn-ghost rounded-btn" onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
-                        <LinkedInIcon className="w-5 h-5 mr-2" />
-                    </div>
-                    <div className="btn btn-ghost rounded-btn" onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                        <GitHubIcon className="w-5 h-5 mr-2" />
-                    </div>
+        <div
+            className={`${
+                scrollState
+                    ? `inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out border-b border-transparent bg-primary text-primary-content fixed navbar`
+                    : `fixed inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out bg-transparent border-b border-transparent text-primary-content navbar`
+            }`}>
+            <div className="flex-1 navbar-start">
+                <div className="btn btn-ghost rounded-btn" onClick={() => setThemeState(!themeState)}>
+                    {themeState ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
                 </div>
 
-                <div className="dropdown dropdown-left lg:hidden">
-                    <div tabIndex={0} className="btn btn-ghost rounded-btn">
-                        <MenuIcon className="w-5 h-5" />
-                    </div>
-                    <ul
-                        id="navbarMenu"
-                        tabIndex={0}
-                        className={`${
-                            themeState
-                                ? `p-2 shadow menu dropdown-content bg-base-100 text-neutral rounded-box`
-                                : `p-2 shadow menu dropdown-content bg-base-100 text-primary rounded-box`
-                        }`}>
-                        {MENU.map(({ id, name, route }) => (
-                            <Link
-                                key={id}
-                                activeClass="btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out text-bold"
-                                to={route}
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                                className={
-                                    'btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out'
-                                }>
-                                {name}
-                            </Link>
-                        ))}
-                    </ul>
+                <div className="btn btn-ghost rounded-btn" onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
+                    <LinkedInIcon className="w-5 h-5 mr-2" />
                 </div>
-
-                <div className="flex-none hidden lg:block">
-                    <ul id="navbarMenu" className="menu horizontal">
-                        {MENU.map(({ id, name, route }) => (
-                            <Link
-                                id={'navbarMenu' + id.toString()}
-                                key={id}
-                                activeClass="btn btn-ghost btn-sm rounded-btn cursor-pointer active font-bold transition duration-300 ease-in-out"
-                                to={route}
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                                className={
-                                    'btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out'
-                                }>
-                                {name}
-                            </Link>
-                        ))}
-                    </ul>
+                <div className="btn btn-ghost rounded-btn" onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
+                    <GitHubIcon className="w-5 h-5 mr-2" />
                 </div>
             </div>
-        </>
+
+            <div className="dropdown dropdown-left lg:hidden">
+                <div tabIndex={0} className="btn btn-ghost rounded-btn">
+                    <MenuIcon className="w-5 h-5" />
+                </div>
+                <ul
+                    id="navbarMenu"
+                    tabIndex={0}
+                    className={`${
+                        themeState
+                            ? `p-2 shadow menu dropdown-content bg-base-100 text-neutral rounded-box`
+                            : `p-2 shadow menu dropdown-content bg-base-100 text-primary rounded-box`
+                    }`}>
+                    {MENU.map(({ id, name, route }) => (
+                        <Link
+                            key={id}
+                            activeClass="btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out text-bold"
+                            to={route}
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className={
+                                'btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out'
+                            }>
+                            {name}
+                        </Link>
+                    ))}
+                </ul>
+            </div>
+
+            <div className="flex-none hidden lg:block">
+                <ul id="navbarMenu" className="menu horizontal">
+                    {MENU.map(({ id, name, route }) => (
+                        <Link
+                            id={'navbarMenu' + id.toString()}
+                            key={id}
+                            activeClass="btn btn-ghost btn-sm rounded-btn cursor-pointer active font-bold transition duration-300 ease-in-out"
+                            to={route}
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className={
+                                'btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out'
+                            }>
+                            {name}
+                        </Link>
+                    ))}
+                </ul>
+            </div>
+        </div>
     );
 };
 

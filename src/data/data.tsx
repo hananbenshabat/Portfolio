@@ -1,14 +1,14 @@
-import CV from '../assets/documents/PDF/hanan_ben_shabat_cv_en.pdf';
+import CV from '../assets/documents/pdf/hanan_ben_shabat_cv_en.pdf';
 import ForecastIcon from '../assets/icons/4cast.svg';
-import Education from '../assets/images/Afeka.jpg';
-import PROJ_FPS_POSTER from '../assets/images/FPS-Poster.jpg';
-import PROJ_INTEGRATIVE_POSTER from '../assets/images/Integrative-Poster.jpg';
-import Military from '../assets/images/Military.jpg';
-import PROJ_OPENGL_POSTER from '../assets/images/OpenGL-Poster.jpg';
-import PROJ_POKERZONE_POSTER from '../assets/images/PokerZone-Poster.jpg';
-import PROJ_RELATIONAL_DB_GUI_POSTER from '../assets/images/Relational-DB-GUI-Poster.jpg';
-import Image from '../assets/images/Social.jpg';
-import PROJ_ZOO_MANAGEMENT_POSTER from '../assets/images/Zoo-Management-Poster.jpg';
+import Education from '../assets/images/afeka.jpg';
+import PROJ_FPS_POSTER from '../assets/images/fps-poster.jpg';
+import PROJ_INTEGRATIVE_POSTER from '../assets/images/integrative-poster.jpg';
+import Military from '../assets/images/military.jpg';
+import PROJ_OPENGL_POSTER from '../assets/images/opengl-poster.jpg';
+import PROJ_POKERZONE_POSTER from '../assets/images/pokerzone-poster.jpg';
+import PROJ_RELATIONAL_DB_GUI_POSTER from '../assets/images/relational-db-gui-poster.jpg';
+import Image from '../assets/images/social.jpg';
+import PROJ_ZOO_MANAGEMENT_POSTER from '../assets/images/zoo-management-poster.jpg';
 import { ImageType, MenuProps, ProjectCardProps, SkillsProps, TimelineProps } from '../types/types';
 import GeneralFunctions from '../utils/general-functions';
 import {

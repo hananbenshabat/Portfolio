@@ -16,19 +16,17 @@ const ExperienceContainer: React.FC = () => {
                 {EXPERIENCE.map(({ id, company, position, description, end, start, logo }) => (
                     <AnimateVisible key={id}>
                         {id % 2 === 0 ? (
-                            <>
-                                <TimelineCard
-                                    styling="right-timeline"
-                                    id={id}
-                                    num={id}
-                                    logo={logo}
-                                    start={start}
-                                    end={end}
-                                    position={position}
-                                    description={description}
-                                    company={company}
-                                />
-                            </>
+                            <TimelineCard
+                                styling="right-timeline"
+                                id={id}
+                                num={id}
+                                logo={logo}
+                                start={start}
+                                end={end}
+                                position={position}
+                                description={description}
+                                company={company}
+                            />
                         ) : (
                             <TimelineCard
                                 styling="flex-row-reverse  left-timeline"

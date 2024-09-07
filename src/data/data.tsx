@@ -57,7 +57,7 @@ export const MENU: MenuProps[] = [
     { id: 5, route: 'contact', name: SECTIONS[4] }
 ];
 
-export const TITLE = 'Full-Stack Engineer';
+export const TITLE = 'Software Engineer';
 
 export { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from './secret-data';
 

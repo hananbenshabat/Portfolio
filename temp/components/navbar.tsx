@@ -57,35 +57,35 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
             }`}>
             <div className="flex-1 navbar-start">
                 <button className="btn btn-ghost rounded-btn" onClick={() => setThemeState(!themeState)}>
-                    <span
+                    <i
                         className="i-mask w-5 h-5"
                         style={{
                             maskImage: `url(${themeState ? MoonIcon : SunIcon})`,
                             WebkitMaskImage: `url(${themeState ? MoonIcon : SunIcon})`
-                        }}></span>
+                        }}></i>
                 </button>
 
                 <button
                     className="btn btn-ghost rounded-btn mr-2"
                     onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
-                    <span
+                    <i
                         className="i-mask w-5 h-5"
-                        style={{ maskImage: `url(${LinkedInIcon})`, WebkitMaskImage: `url(${LinkedInIcon})` }}></span>
+                        style={{ maskImage: `url(${LinkedInIcon})`, WebkitMaskImage: `url(${LinkedInIcon})` }}></i>
                 </button>
                 <button
                     className="btn btn-ghost rounded-btn mr-2"
                     onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                    <span
+                    <i
                         className="i-mask w-5 h-5"
-                        style={{ maskImage: `url(${GitHubIcon})`, WebkitMaskImage: `url(${GitHubIcon})` }}></span>
+                        style={{ maskImage: `url(${GitHubIcon})`, WebkitMaskImage: `url(${GitHubIcon})` }}></i>
                 </button>
             </div>
 
             <div className="dropdown dropdown-left lg:hidden">
                 <button className="btn btn-ghost rounded-btn" onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                    <span
+                    <i
                         className="i-mask w-5 h-5"
-                        style={{ maskImage: `url(${MenuIcon})`, WebkitMaskImage: `url(${MenuIcon})` }}></span>
+                        style={{ maskImage: `url(${MenuIcon})`, WebkitMaskImage: `url(${MenuIcon})` }}></i>
                 </button>
                 <ul
                     id="navbarMenu"

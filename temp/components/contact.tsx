@@ -69,13 +69,23 @@ const Contact = () => {
                     <button
                         className="transition rounded-full cursor-pointer btn btn-primary  my-2 ml-2 mr-3 lowercase"
                         onClick={() => GeneralFunctions.openInNewTab(EMAIL)}>
-                        <img className="w-5 h-5" src={EMailIcon} />
+                        <i
+                            className="i-mask w-5 h-5"
+                            style={{
+                                maskImage: `url(${EMailIcon})`,
+                                WebkitMaskImage: `url(${EMailIcon})`
+                            }}></i>
                         {EMAIL_URL}
                     </button>
                     <button
                         className="transition rounded-full cursor-pointer btn btn-primary my-2 ml-2 mr-3"
                         onClick={() => GeneralFunctions.openInNewTab(WHATSAPP)}>
-                        <img className="w-5 h-5" src={WhatsAppIcon} />
+                        <i
+                            className="i-mask w-5 h-5"
+                            style={{
+                                maskImage: `url(${WhatsAppIcon})`,
+                                WebkitMaskImage: `url(${WhatsAppIcon})`
+                            }}></i>
                         {PHONE}
                     </button>
                     <br />

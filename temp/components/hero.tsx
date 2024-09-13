@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import ArrowCircleDownIcon from '../assets/icons/svg/download.svg';
 import GitHubIcon from '../assets/icons/svg/github.svg';
 import LinkedInIcon from '../assets/icons/svg/linkedin.svg';
-import { CITY, COUNTRY, CV_URL, GITHUB, LINKEDIN } from '../data/data';
+import { CV_URL, GITHUB, LINKEDIN } from '../data/data';
 import '../styles/mouse.css';
 import { HeroProps } from '../types/types';
 import GeneralFunctions from '../utils/general-functions';
@@ -32,57 +32,55 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
                     <motion.div animate={{ scale: [0.5, 1] }} transition={{ duration: 0.5 }}>
                         <div className="hidden lg:block">
                             <h1 className="mb-5 text-5xl font-bold tracking-tighter">{greetingText}</h1>
-                            <p className="mb-5">{greetingDescription + ', ' + CITY + ', ' + COUNTRY + '.'}</p>
+                            <p className="mb-5">{greetingDescription}</p>
                             <a
                                 className="transition rounded-full cursor-pointer btn btn-primary mr-5"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
-                                <span
+                                <i
                                     className="i-mask w-5 h-5"
                                     style={{
                                         maskImage: `url(${ArrowCircleDownIcon})`,
                                         WebkitMaskImage: `url(${ArrowCircleDownIcon})`
-                                    }}></span>
+                                    }}></i>
                                 {buttonText}
                             </a>
                             <button
                                 className="transition rounded-full cursor-pointer btn btn-primary ml-2 mr-5"
                                 onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
-                                <span
+                                <i
                                     className="i-mask w-5 h-5"
                                     style={{
                                         maskImage: `url(${LinkedInIcon})`,
                                         WebkitMaskImage: `url(${LinkedInIcon})`
-                                    }}></span>
+                                    }}></i>
                             </button>
                             <button
                                 className="transition rounded-full cursor-pointer btn btn-primary"
                                 onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                                <span
+                                <i
                                     className="i-mask w-5 h-5"
                                     style={{
                                         maskImage: `url(${GitHubIcon})`,
                                         WebkitMaskImage: `url(${GitHubIcon})`
-                                    }}></span>
+                                    }}></i>
                             </button>
                         </div>
                         <div className="lg:hidden">
                             <h1 className="mb-5 text-4xl font-bold tracking-tighter">{greetingText}</h1>
                             <p className="mb-5">
                                 <span className="text-xl">{greetingDescription}</span>
-                                <br />
-                                {CITY + ', ' + COUNTRY}
                             </p>
                             <a
                                 className="transition rounded-full cursor-pointer btn btn-primary mr-2"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
-                                <span
+                                <i
                                     className="i-mask w-5 h-5"
                                     style={{
                                         maskImage: `url(${ArrowCircleDownIcon})`,
                                         WebkitMaskImage: `url(${ArrowCircleDownIcon})`
-                                    }}></span>
+                                    }}></i>
                                 {buttonText}
                             </a>
                         </div>

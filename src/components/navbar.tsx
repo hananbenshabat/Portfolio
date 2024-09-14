@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+import { ReactSVG } from 'react-svg';
 import GitHubIcon from '../assets/icons/svg/github.svg';
 import LinkedInIcon from '../assets/icons/svg/linkedin.svg';
 import MenuIcon from '../assets/icons/svg/menu.svg';
@@ -57,35 +58,24 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
             }`}>
             <div className="flex-1 navbar-start">
                 <button className="btn btn-ghost rounded-btn" onClick={() => setThemeState(!themeState)}>
-                    <i
-                        className="i-mask w-5 h-5"
-                        style={{
-                            maskImage: `url(${themeState ? MoonIcon : SunIcon})`,
-                            WebkitMaskImage: `url(${themeState ? MoonIcon : SunIcon})`
-                        }}></i>
+                    <ReactSVG className="w-5 h-5" src={themeState ? MoonIcon : SunIcon} />
                 </button>
 
                 <button
                     className="btn btn-ghost rounded-btn mr-2"
                     onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
-                    <i
-                        className="i-mask w-5 h-5"
-                        style={{ maskImage: `url(${LinkedInIcon})`, WebkitMaskImage: `url(${LinkedInIcon})` }}></i>
+                    <ReactSVG className="w-5 h-5" src={LinkedInIcon} />
                 </button>
                 <button
                     className="btn btn-ghost rounded-btn mr-2"
                     onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                    <i
-                        className="i-mask w-5 h-5"
-                        style={{ maskImage: `url(${GitHubIcon})`, WebkitMaskImage: `url(${GitHubIcon})` }}></i>
+                    <ReactSVG className="w-5 h-5" src={GitHubIcon} />
                 </button>
             </div>
 
             <div className="dropdown dropdown-left lg:hidden">
                 <button className="btn btn-ghost rounded-btn" onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                    <i
-                        className="i-mask w-5 h-5"
-                        style={{ maskImage: `url(${MenuIcon})`, WebkitMaskImage: `url(${MenuIcon})` }}></i>
+                    <ReactSVG className="w-5 h-5" src={MenuIcon} />
                 </button>
                 <ul
                     id="navbarMenu"

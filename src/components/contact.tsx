@@ -1,5 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
+import { ReactSVG } from 'react-svg';
 import EMailIcon from '../assets/icons/svg/email.svg';
 import WhatsAppIcon from '../assets/icons/svg/whatsapp.svg';
 import {
@@ -69,23 +70,13 @@ const Contact = () => {
                     <button
                         className="transition rounded-full cursor-pointer btn btn-primary  my-2 ml-2 mr-3 lowercase"
                         onClick={() => GeneralFunctions.openInNewTab(EMAIL)}>
-                        <i
-                            className="i-mask w-5 h-5"
-                            style={{
-                                maskImage: `url(${EMailIcon})`,
-                                WebkitMaskImage: `url(${EMailIcon})`
-                            }}></i>
+                        <ReactSVG className="w-5 h-5" src={EMailIcon} />
                         {EMAIL_URL}
                     </button>
                     <button
                         className="transition rounded-full cursor-pointer btn btn-primary my-2 ml-2 mr-3"
                         onClick={() => GeneralFunctions.openInNewTab(WHATSAPP)}>
-                        <i
-                            className="i-mask w-5 h-5"
-                            style={{
-                                maskImage: `url(${WhatsAppIcon})`,
-                                WebkitMaskImage: `url(${WhatsAppIcon})`
-                            }}></i>
+                        <ReactSVG className="w-5 h-5" src={WhatsAppIcon} />
                         {PHONE}
                     </button>
                     <br />

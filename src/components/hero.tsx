@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Link } from 'react-scroll';
+import { ReactSVG } from 'react-svg';
 import ArrowCircleDownIcon from '../assets/icons/svg/download.svg';
 import GitHubIcon from '../assets/icons/svg/github.svg';
 import LinkedInIcon from '../assets/icons/svg/linkedin.svg';
@@ -37,33 +38,18 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
                                 className="transition rounded-full cursor-pointer btn btn-primary mr-5"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
-                                <i
-                                    className="i-mask w-5 h-5"
-                                    style={{
-                                        maskImage: `url(${ArrowCircleDownIcon})`,
-                                        WebkitMaskImage: `url(${ArrowCircleDownIcon})`
-                                    }}></i>
+                                <ReactSVG className="w-5 h-5" src={ArrowCircleDownIcon} />
                                 {buttonText}
                             </a>
                             <button
                                 className="transition rounded-full cursor-pointer btn btn-primary ml-2 mr-5"
                                 onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
-                                <i
-                                    className="i-mask w-5 h-5"
-                                    style={{
-                                        maskImage: `url(${LinkedInIcon})`,
-                                        WebkitMaskImage: `url(${LinkedInIcon})`
-                                    }}></i>
+                                <ReactSVG className="w-5 h-5" src={LinkedInIcon} />
                             </button>
                             <button
                                 className="transition rounded-full cursor-pointer btn btn-primary"
                                 onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
-                                <i
-                                    className="i-mask w-5 h-5"
-                                    style={{
-                                        maskImage: `url(${GitHubIcon})`,
-                                        WebkitMaskImage: `url(${GitHubIcon})`
-                                    }}></i>
+                                <ReactSVG className="w-5 h-5" src={GitHubIcon} />
                             </button>
                         </div>
                         <div className="lg:hidden">
@@ -75,12 +61,7 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
                                 className="transition rounded-full cursor-pointer btn btn-primary mr-2"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
-                                <i
-                                    className="i-mask w-5 h-5"
-                                    style={{
-                                        maskImage: `url(${ArrowCircleDownIcon})`,
-                                        WebkitMaskImage: `url(${ArrowCircleDownIcon})`
-                                    }}></i>
+                                <ReactSVG className="w-5 h-5" src={ArrowCircleDownIcon} />
                                 {buttonText}
                             </a>
                         </div>

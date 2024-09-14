@@ -3,6 +3,7 @@ import '@vidstack/react/player/styles/default/layouts/audio.css';
 import '@vidstack/react/player/styles/default/layouts/video.css';
 import '@vidstack/react/player/styles/default/theme.css';
 import React from 'react';
+import { ReactSVG } from 'react-svg';
 import LinkIcon from '../assets/icons/svg/link.svg';
 import { ProjectCardProps } from '../types/types';
 import GeneralFunctions from '../utils/general-functions';
@@ -30,9 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         <button
                             className="btn btn-ghost rounded-full"
                             onClick={() => GeneralFunctions.openInNewTab(link)}>
-                            <i
-                                className="i-mask w-5 h-5"
-                                style={{ maskImage: `url(${LinkIcon})`, WebkitMaskImage: `url(${LinkIcon})` }}></i>
+                            <ReactSVG className="w-5 h-5" src={LinkIcon} />
                         </button>
                     </div>
                 </h2>

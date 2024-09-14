@@ -28,6 +28,7 @@ export function VidstackPlayer({ projectName, projectImageLogo, video }) {
                 title={projectName}
                 src={'youtube/' + video}
                 ref={ref}
+                streamType="on-demand"
                 playsInline
                 muted>
                 <MediaProvider>

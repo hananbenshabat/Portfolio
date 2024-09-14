@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          cp -a dist/. public/
+          xcopy dist public /E /I /Y
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4

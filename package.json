@@ -24,7 +24,7 @@
     "scripts": {
         "start": "vite --port=3000",
         "build": "vite build",
-        "copyPublic": "copyfiles -E -I dist/* public",
+        "copyPublic": "copyfiles public/* --a --u 1 dist",
         "preview": "vite preview",
         "format": "prettier --write ."
     },

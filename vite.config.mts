@@ -7,7 +7,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
     build: {
         emptyOutDir: false,
-        assetsInlineLimit: 0,
         rollupOptions: {
             output: {
                 manualChunks(id) {

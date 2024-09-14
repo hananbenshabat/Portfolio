@@ -13,6 +13,9 @@ import {
 } from '@vidstack/react';
 import { FullscreenExitIcon, FullscreenIcon, PauseIcon, PlayIcon } from '@vidstack/react/icons';
 import '@vidstack/react/player/styles/base.css';
+import '@vidstack/react/player/styles/default/layouts/audio.css';
+import '@vidstack/react/player/styles/default/layouts/video.css';
+import '@vidstack/react/player/styles/default/theme.css';
 import { useRef } from 'react';
 
 export function VidstackPlayer({ projectName, projectImageLogo, video }) {

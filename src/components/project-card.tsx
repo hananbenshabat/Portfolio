@@ -1,7 +1,3 @@
-import '@vidstack/react/player/styles/base.css';
-import '@vidstack/react/player/styles/default/layouts/audio.css';
-import '@vidstack/react/player/styles/default/layouts/video.css';
-import '@vidstack/react/player/styles/default/theme.css';
 import React from 'react';
 import { ReactSVG } from 'react-svg';
 import LinkIcon from '../assets/icons/svg/link.svg';

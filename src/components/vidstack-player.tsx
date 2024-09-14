@@ -1,4 +1,5 @@
 import {
+    Controls,
     FullscreenButton,
     Gesture,
     MediaPlayer,
@@ -28,7 +29,6 @@ export function VidstackPlayer({ projectName, projectImageLogo, video }) {
                 src={'youtube/' + video}
                 ref={ref}
                 streamType="on-demand"
-                crossOrigin
                 playsInline
                 muted>
                 <MediaProvider>
@@ -38,7 +38,7 @@ export function VidstackPlayer({ projectName, projectImageLogo, video }) {
                         alt={projectName}
                     />
                 </MediaProvider>
-                {/* <Gestures />
+                <Gestures />
                 <Controls.Root className="vds-controls">
                     <div className="vds-controls-spacer" />
                     <Controls.Group className="flex w-full items-center px-2">
@@ -50,7 +50,7 @@ export function VidstackPlayer({ projectName, projectImageLogo, video }) {
                         <div className="vds-controls-spacer" />
                         <Fullscreen />
                     </Controls.Group>
-                </Controls.Root> */}
+                </Controls.Root>
             </MediaPlayer>
         </div>
     );

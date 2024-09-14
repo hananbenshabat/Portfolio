@@ -1,5 +1,4 @@
 import React from 'react';
-import Illustration from '../assets/icons/svg/footer.svg';
 import Contact from '../components/contact';
 import Hero from '../components/hero';
 import { CTA_TEXT, NAME, TITLE } from '../data/data';
@@ -15,7 +14,6 @@ const HomeContainer: React.FC = () => {
             <SkillsContainer />
             <ProjectsContainer />
             <Contact />
-            <img className="w-5 h-5 p-0 m-0 antialiased text-center" src={Illustration} />
         </div>
     );
 };

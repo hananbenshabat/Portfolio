@@ -26,7 +26,7 @@ export function VidstackPlayer({ projectName, projectImageLogo, video }) {
             <MediaPlayer
                 className="w-full aspect-video bg-slate-900 text-white font-sans overflow-hidden rounded-md ring-media-focus data-[focus]:ring-4"
                 title={projectName}
-                src={[{ src: 'youtube/' + video, type: 'video/youtube' }]}
+                src={'youtube/' + video}
                 ref={ref}
                 streamType="on-demand"
                 playsInline

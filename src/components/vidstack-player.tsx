@@ -3,13 +3,14 @@ import {
     FullscreenButton,
     Gesture,
     MediaPlayer,
+    MediaPlayerInstance,
     MediaProvider,
     PlayButton,
     Poster,
+    Slider,
     Time,
     TimeSlider,
-    useMediaState,
-    type MediaPlayerInstance
+    useMediaState
 } from '@vidstack/react';
 import { FullscreenExitIcon, FullscreenIcon, PauseIcon, PlayIcon } from '@vidstack/react/icons';
 import '@vidstack/react/player/styles/base.css';
@@ -18,7 +19,7 @@ import '@vidstack/react/player/styles/default/layouts/video.css';
 import '@vidstack/react/player/styles/default/theme.css';
 import { useRef } from 'react';
 
-export function VidstackPlayer({ projectName, projectImageLogo, video }) {
+export function VidstackPlayer({ id, projectName, projectImageLogo, video }) {
     const ref = useRef<MediaPlayerInstance>(null);
 
     return (
@@ -29,6 +30,7 @@ export function VidstackPlayer({ projectName, projectImageLogo, video }) {
                 src={'youtube/' + video}
                 ref={ref}
                 streamType="on-demand"
+                crossOrigin
                 playsInline
                 muted>
                 <MediaProvider>
@@ -42,7 +44,7 @@ export function VidstackPlayer({ projectName, projectImageLogo, video }) {
                 <Controls.Root className="vds-controls">
                     <div className="vds-controls-spacer" />
                     <Controls.Group className="flex w-full items-center px-2">
-                        <VidstackTimeSlider />
+                        <VidstackTimeSlider id={id} />
                     </Controls.Group>
                     <Controls.Group className="-mt-0.5 flex w-full items-center pb-2 px-2">
                         <Play />
@@ -95,34 +97,21 @@ export function TimeGroup() {
     );
 }
 
-export function VidstackTimeSlider({ thumbnails }: { thumbnails?: string }) {
+export function VidstackTimeSlider({ id }) {
     return (
-        <TimeSlider.Root className="vds-time-slider vds-slider h-8">
-            <TimeSlider.Chapters className="vds-slider-chapters">
-                {(cues, forwardRef) =>
-                    cues.map((cue) => (
-                        <div className="vds-slider-chapter" key={cue.startTime} ref={forwardRef}>
-                            <TimeSlider.Track className="vds-slider-track" />
-                            <TimeSlider.TrackFill className="vds-slider-track-fill vds-slider-track" />
-                            <TimeSlider.Progress className="vds-slider-progress vds-slider-track" />
-                        </div>
-                    ))
-                }
-            </TimeSlider.Chapters>
+        <TimeSlider.Root className="group relative mx-[7.5px] inline-flex h-8 w-full cursor-pointer touch-none select-none items-center outline-none aria-hidden:hidden">
+            <TimeSlider.Track className="relative ring-sky-400 z-0 h-[5px] w-full rounded-md bg-white/30 group-data-[focus]:ring-[3px]">
+                <TimeSlider.TrackFill
+                    className={`absolute h-full w-[var(--slider-fill)] rounded-md will-change-[width] ${id % 2 === 0 ? `bg-secondary text-secondary-content` : `bg-primary-focus text-primary-content`}`}
+                />
+            </TimeSlider.Track>
 
-            <TimeSlider.Thumb className="vds-slider-thumb" />
-
-            <TimeSlider.Preview className="vds-slider-preview">
-                {thumbnails ? (
-                    <TimeSlider.Thumbnail.Root src={thumbnails} className="vds-slider-thumbnail vds-thumbnail">
-                        <TimeSlider.Thumbnail.Img />
-                    </TimeSlider.Thumbnail.Root>
-                ) : null}
-
-                <TimeSlider.ChapterTitle className="vds-slider-chapter-title" />
-
-                <TimeSlider.Value className="vds-slider-value" />
+            <TimeSlider.Preview
+                className="flex flex-col items-center opacity-0 transition-opacity duration-200 data-[visible]:opacity-100 pointer-events-none"
+                noClamp>
+                <TimeSlider.Value className="rounded-md bg-black px-2 py-px text-[13px] font-medium text-white" />
             </TimeSlider.Preview>
+            <Slider.Thumb className="absolute left-[var(--slider-fill)] top-1/2 z-20 h-[15px] w-[15px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#cacaca] bg-white opacity-0 ring-white/40 transition-opacity group-data-[active]:opacity-100 group-data-[dragging]:ring-4 will-change-[left]" />
         </TimeSlider.Root>
     );
 }

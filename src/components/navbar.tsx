@@ -35,14 +35,6 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
 
     useEffect(() => setTheme(themeState ? 'winter' : 'night'), [themeState]);
 
-    // useEffect(() => {
-    //     if (themeState) {
-    //         setTheme('winter');
-    //     } else {
-    //         setTheme('night');
-    //     }
-    // }, [themeState]);
-
     useEffect(() => {
         listener = document.addEventListener('scroll', highlightNavbar);
 
@@ -74,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
             </div>
 
             <div className="dropdown dropdown-left lg:hidden">
-                <button className="btn btn-ghost rounded-btn" onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
+                <button className="btn btn-ghost rounded-btn">
                     <ReactSVG className="w-5 h-5" src={MenuIcon} />
                 </button>
                 <ul

@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             className={`mx-6 card ${
                 id % 2 === 0 ? `bg-secondary text-secondary-content` : `bg-primary-focus text-primary-content`
             }`}>
-            {/* <VidstackPlayer projectName={projectName} projectImageLogo={projectImageLogo} video={video} /> */}
+            {/* <VidstackPlayer id={id} projectName={projectName} projectImageLogo={projectImageLogo} video={video} /> */}
             <div className="max-w-md card-body">
                 <h2 className="card-title font-bold">
                     {projectName}

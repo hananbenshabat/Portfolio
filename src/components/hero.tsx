@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
             </div>
 
             <div className="text-justify hero-content">
-                <div className="max-w-lg ml-10">
+                <div className="max-w-lg px-10">
                     <motion.div animate={{ scale: [0.5, 1] }} transition={{ duration: 0.5 }}>
                         <div className="hidden lg:block">
                             <h1 className="mb-5 text-5xl font-bold tracking-tighter">{greetingText}</h1>

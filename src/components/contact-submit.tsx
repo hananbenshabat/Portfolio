@@ -8,7 +8,7 @@ const ContactSubmit: React.FC<ContactSubmitProps> = ({ type, message }) => {
         case 'alert-error':
             return (
                 <div className="relative inline-block pl-5">
-                    <div className={`${`alert ` + type + ` font-bold h-5 max-w-content justify-center`}`}>
+                    <div className={`${`alert ` + type + ` font-bold h-8 flex max-w-content justify-center py-0`}`}>
                         <label>{message}</label>
                     </div>
                 </div>

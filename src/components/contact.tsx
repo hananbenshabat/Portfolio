@@ -60,29 +60,23 @@ const Contact = () => {
 
     return (
         <AnimateVisible>
-            <div id="contact">
-                <br />
-                <br />
+            <div id="contact" className="min-h-dvh">
                 <Heading heading={SECTIONS[4]} />
-                <div className="mx-auto px-6 max-w-screen-md">
-                    <br />
-                    <br />
+                <div className="max-w-screen-md mx-auto pt-10 px-6">
                     <button
-                        className="transition rounded-full cursor-pointer btn btn-primary  my-2 ml-2 mr-3 lowercase"
+                        className="rounded-full cursor-pointer btn btn-primary my-2 ml-2 mr-3 lowercase"
                         onClick={() => GeneralFunctions.openInNewTab(EMAIL)}>
                         <ReactSVG className="w-5 h-5" src={EMailIcon} />
                         {EMAIL_URL}
                     </button>
                     <button
-                        className="transition rounded-full cursor-pointer btn btn-primary my-2 ml-2 mr-3"
+                        className="rounded-full cursor-pointer btn btn-primary my-2 ml-2 mr-3"
                         onClick={() => GeneralFunctions.openInNewTab(WHATSAPP)}>
                         <ReactSVG className="w-5 h-5" src={WhatsAppIcon} />
                         {PHONE}
                     </button>
-                    <br />
-                    <br />
-                    <div className="flex flex-col w-full px-4 card bg-secondary text-primary-content">
-                        <form action="#" className="space-y-8 my-5" ref={form} onSubmit={sendEmail.bind(this)}>
+                    <div className="flex flex-col w-full px-4 mt-5 card bg-secondary text-primary-content">
+                        <form action="#" className="space-y-8 py-5" ref={form} onSubmit={sendEmail.bind(this)}>
                             <div>
                                 <label htmlFor="email" className="card-title font-bold mb-2">
                                     Email
@@ -119,7 +113,7 @@ const Contact = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="transition rounded-full cursor-pointer btn glass btn-primary font-bold mb-2"
+                                className="rounded-full cursor-pointer btn glass btn-primary font-bold mb-2"
                                 disabled={isSendingOutput}>
                                 Submit
                             </button>
@@ -127,8 +121,6 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <br />
-                <br />
             </div>
         </AnimateVisible>
     );

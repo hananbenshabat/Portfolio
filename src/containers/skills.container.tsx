@@ -6,10 +6,8 @@ import AnimateVisible from '../utils/animate-visible';
 const SkillsContainer: React.FC = () => {
     return (
         <div className="flex flex-col w-full" id="skills">
-            <br />
-            <br />
             <Heading heading={SECTIONS[2]} />
-            <div className="grid gap-6 mt-5 lg:grid-cols-3 justify-items-center auto-rows-fr">
+            <div className="grid gap-6 pt-10 lg:grid-cols-3 justify-items-center auto-rows-fr">
                 {skills.map(({ id, skill, level }) => (
                     <AnimateVisible key={id}>
                         <div

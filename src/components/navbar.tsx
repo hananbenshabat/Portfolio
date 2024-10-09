@@ -45,8 +45,8 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
         <div
             className={`${
                 scrollState
-                    ? `inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out border-b border-transparent bg-primary text-primary-content fixed navbar`
-                    : `fixed inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out bg-transparent border-b border-transparent text-primary-content navbar`
+                    ? `inset-x-0 top-0 z-50 w-full border-b border-transparent bg-primary text-primary-content fixed navbar`
+                    : `fixed inset-x-0 top-0 z-50 w-full bg-transparent border-b border-transparent text-primary-content navbar`
             }`}>
             <div className="flex-1 navbar-start">
                 <button className="btn btn-ghost rounded-btn" onClick={() => setThemeState(!themeState)}>
@@ -74,20 +74,18 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
                     tabIndex={0}
                     className={`${
                         themeState
-                            ? `p-2 shadow menu dropdown-content bg-base-100 text-neutral rounded-box`
-                            : `p-2 shadow menu dropdown-content bg-base-100 text-primary rounded-box`
+                            ? ` p-2 shadow menu dropdown-content bg-base-100 text-neutral rounded-box`
+                            : ` p-2 shadow menu dropdown-content bg-base-100 text-primary rounded-box`
                     }`}>
                     {MENU.map(({ id, name, route }) => (
                         <Link
                             key={id}
-                            activeClass="btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out text-bold"
+                            className="btn btn-primary btn-ghost btn-sm rounded-btn cursor-pointer font-normal"
+                            activeStyle={{ fontWeight: 700 }}
                             to={route}
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            className={
-                                'btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out'
-                            }>
+                            duration={500}>
                             {name}
                         </Link>
                     ))}
@@ -95,19 +93,17 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
             </div>
 
             <div className="flex-none hidden lg:block">
-                <ul id="navbarMenu" className="menu horizontal">
+                <ul id="navbarMenu" className="menu-horizontal horizontal">
                     {MENU.map(({ id, name, route }) => (
                         <Link
                             id={'navbarMenu' + id.toString()}
+                            className="btn btn-sm btn-primary btn-ghost rounded-btn cursor-pointer font-normal"
+                            activeStyle={{ fontWeight: 700 }}
                             key={id}
-                            activeClass="btn btn-ghost btn-sm rounded-btn cursor-pointer active font-bold transition duration-300 ease-in-out"
                             to={route}
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            className={
-                                'btn-primary btn-ghost btn-sm rounded-btn cursor-pointer transition duration-300 ease-in-out'
-                            }>
+                            duration={500}>
                             {name}
                         </Link>
                     ))}

@@ -3,7 +3,7 @@ import { build, preview } from 'vite';
 let previewServer;
 
 build({ build: { watch: {} } }).then((buildWatcher) => {
-    buildWatcher.on('event', async({ code }) => {
+    buildWatcher.on('event', async ({ code }) => {
         if (code === 'END') {
             previewServer = previewServer || (await preview());
 

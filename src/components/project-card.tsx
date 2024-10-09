@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         <button
                             className="btn btn-ghost rounded-full"
                             onClick={() => GeneralFunctions.openInNewTab(link)}>
-                            <ReactSVG className="w-5 h-5" src={LinkIcon} />
+                            <ReactSVG src={LinkIcon} />
                         </button>
                     </div>
                 </h2>

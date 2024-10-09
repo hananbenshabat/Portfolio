@@ -17,11 +17,11 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
             id="home">
             <div className="moving-mouse-holder">
                 <Link
+                    className="absolute left-1/2 bottom-12 hidden lg:block rounded-full cursor-pointer"
                     to={'resume'}
                     spy={true}
                     smooth={true}
-                    duration={500}
-                    className="absolute left-1/2 bottom-12 hidden lg:block transition rounded-full cursor-pointer">
+                    duration={500}>
                     <div className="relative border-2 rounded-full w-6 h-10 border-primary-content right-3">
                         <div className="mouse-button bg-primary-content">&nbsp;</div>
                     </div>
@@ -35,30 +35,32 @@ const Hero: React.FC<HeroProps> = ({ greetingText, greetingDescription, buttonTe
                             <h1 className="mb-5 text-5xl font-bold tracking-tighter">{greetingText}</h1>
                             <p className="mb-5">{greetingDescription}</p>
                             <a
-                                className="transition rounded-full cursor-pointer btn btn-primary mr-5"
+                                className="rounded-full cursor-pointer btn btn-primary mr-5"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
                                 <ReactSVG className="w-5 h-5" src={ArrowCircleDownIcon} />
                                 {buttonText}
                             </a>
                             <button
-                                className="transition rounded-full cursor-pointer btn btn-primary ml-2 mr-5"
+                                className="rounded-full cursor-pointer btn btn-primary ml-2 mr-5"
                                 onClick={() => GeneralFunctions.openInNewTab(LINKEDIN)}>
                                 <ReactSVG className="w-5 h-5" src={LinkedInIcon} />
                             </button>
                             <button
-                                className="transition rounded-full cursor-pointer btn btn-primary"
+                                className="rounded-full cursor-pointer btn btn-primary"
                                 onClick={() => GeneralFunctions.openInNewTab(GITHUB)}>
                                 <ReactSVG className="w-5 h-5" src={GitHubIcon} />
                             </button>
                         </div>
                         <div className="lg:hidden">
-                            <h1 className="mb-5 text-4xl font-bold tracking-tighter">{greetingText}</h1>
+                            <h1 className="mb-5 text-4xl font-bold tracking-tighter whitespace-nowrap">
+                                {greetingText}
+                            </h1>
                             <p className="mb-5">
                                 <span className="text-xl">{greetingDescription}</span>
                             </p>
                             <a
-                                className="transition rounded-full cursor-pointer btn btn-primary mr-2"
+                                className="rounded-full cursor-pointer btn btn-primary mr-2"
                                 href={CV_URL}
                                 download="hanan-ben-shabat-cv.pdf">
                                 <ReactSVG className="w-5 h-5" src={ArrowCircleDownIcon} />

@@ -60,7 +60,7 @@ const Contact = () => {
 
     return (
         <AnimateVisible>
-            <div id="contact" className="min-h-dvh">
+            <div id="contact" className="min-h-dvh pb-20">
                 <Heading heading={SECTIONS[4]} />
                 <div className="max-w-screen-md mx-auto pt-10 px-6">
                     <button

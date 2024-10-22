@@ -98,7 +98,7 @@ export const skills: SkillsProps[] = [
     { skill: 'C#', level: 90 },
     { skill: 'Python', level: 70 },
     { skill: 'Java', level: 80 },
-    { skill: 'HTML, CSS, SCSS, Bootstrap', level: 97 },
+    { skill: 'HTML, CSS, SCSS', level: 97 },
     { skill: 'Bootstrap, Tailwind CSS', level: 97 },
     { skill: 'Angular, PrimeNG', level: 100 },
     { skill: 'Typescript, Javascript', level: 99 },

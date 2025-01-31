@@ -6,6 +6,7 @@ import Military from '../assets/icons/jpg/military.jpg';
 import PROJ_OPENGL_POSTER from '../assets/icons/jpg/opengl-poster.jpg';
 import PROJ_POKERZONE_POSTER from '../assets/icons/jpg/pokerzone-poster.jpg';
 import PROJ_RELATIONAL_DB_GUI_POSTER from '../assets/icons/jpg/relational-db-gui-poster.jpg';
+import RiverbedIcon from '../assets/icons/jpg/riverbed.jpg';
 import Image from '../assets/icons/jpg/social.jpg';
 import PROJ_ZOO_MANAGEMENT_POSTER from '../assets/icons/jpg/zoo-management-poster.jpg';
 import ForecastIcon from '../assets/icons/svg/4cast.svg';
@@ -29,7 +30,6 @@ import {
     PROJ_RELATIONAL_DB_GUI_YOUTUBE,
     PROJ_ZOO_MANAGEMENT_YOUTUBE
 } from './secret-data';
-
 const LINKEDIN_URL = 'https://www.linkedin.com/in/';
 const GITHUB_URL = 'https://github.com/';
 const EMAIL_NAME = GeneralFunctions.stringifyArr(LAST_NAME) + FIRST_NAME;
@@ -68,7 +68,7 @@ export const EXPERIENCE: TimelineProps[] = [
         logo: Military,
         start: '2015',
         end: '2018',
-        description: 'Developed client side in Angular and server side in Microsoft SQL Server and .NET.'
+        description: 'Client side in Angular, server side in .NET and Microsoft SQL Server.'
     },
     {
         company: 'Afeka College of Engineering',
@@ -83,9 +83,17 @@ export const EXPERIENCE: TimelineProps[] = [
         position: 'Full-Stack Engineer',
         logo: ForecastIcon,
         start: '02/2023',
-        end: GeneralFunctions.getCurrentDate(),
+        end: '12/2024',
         description:
-            'Developed decision intelligence platform. Client side in Angular and server side in PostgreSQL and .NET.'
+            'Developed decision intelligence platform.\nClient side in Angular, server side in .NET Core and PostgreSQL.'
+    },
+    {
+        company: 'Riverbed Technology',
+        position: 'Full-Stack Engineer',
+        logo: RiverbedIcon,
+        start: '12/2024',
+        end: GeneralFunctions.getCurrentDate(),
+        description: 'Client side in Angular, server side in Java and OracleDB.'
     }
 ].map((experience, index) => ({ id: index + 1, ...experience }));
 

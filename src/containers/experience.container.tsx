@@ -8,7 +8,7 @@ const ExperienceContainer: React.FC = () => {
     return (
         <div id="resume" className="mx-3 lg:mx-12">
             <Heading heading={SECTIONS[1]} />
-            <div className="relative h-full p-10 overflow-hidden wrap">
+            <div className="relative h-full p-10 overflow-hidden wrap whitespace-pre-line">
                 <div className="absolute h-full border border-accent border-2-2 border-opacity-20 left-1/2 hidden lg:block" />
 
                 {EXPERIENCE.map(({ id, company, position, description, end, start, logo }) => (
@@ -27,7 +27,7 @@ const ExperienceContainer: React.FC = () => {
                             />
                         ) : (
                             <TimelineCard
-                                styling="flex-row-reverse  left-timeline"
+                                styling="flex-row-reverse left-timeline"
                                 id={id}
                                 logo={logo}
                                 num={id}

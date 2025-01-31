@@ -21,7 +21,7 @@ import Heading from './heading';
 const Contact = () => {
     const [submitOutput, setSubmitOutput] = useState(<ContactSubmit />);
     const [isSendingOutput, setIsSendingOutput] = useState(false);
-    const form = useRef();
+    const form = useRef(undefined);
 
     const sendEmail = (e: { preventDefault: () => void; target: { reset: () => void } }) => {
         e.preventDefault();
@@ -113,7 +113,7 @@ const Contact = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="rounded-full cursor-pointer btn glass btn-primary font-bold mb-2"
+                                className="rounded-full cursor-pointer btn glass btn-primary font-bold"
                                 disabled={isSendingOutput}>
                                 Submit
                             </button>

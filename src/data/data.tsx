@@ -145,7 +145,7 @@ export const projects: ProjectCardProps[] = [
         projectImageLogo: PROJ_INTEGRATIVE_POSTER,
         link: GITHUB_REPO('Integrative-Project'),
         video: PROJ_INTEGRATIVE_YOUTUBE,
-        tech: ['Java', 'Spring', 'React', 'NodeJS', 'MongoDB']
+        tech: ['Java', 'Spring', 'React', 'MongoDB']
     },
     {
         projectName: 'Relational DB GUI',
@@ -154,7 +154,7 @@ export const projects: ProjectCardProps[] = [
         projectImageLogo: PROJ_RELATIONAL_DB_GUI_POSTER,
         link: GITHUB_REPO('Relational-DB-GUI'),
         video: PROJ_RELATIONAL_DB_GUI_YOUTUBE,
-        tech: ['Python', 'SQLite', 'Tkinter', 'pandas']
+        tech: ['Python', 'SQLite', 'Tkinter', 'Pandas']
     },
     {
         projectName: '3D Fundamentals',

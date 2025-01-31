@@ -1,0 +1,30 @@
+@layer utilities {
+    @import './daisyui-beta-button-ghost.css';
+    @import './daisyui-beta-button-glass.css';
+
+    .btn:active:hover,
+    .btn:active:focus {
+        animation: button-pop 0s ease-out;
+        transform: scale(var(--btn-focus-scale, 0.97));
+    }
+}
+
+@keyframes button-pop {
+    0% {
+        transform: scale(var(--btn-focus-scale, 0.98));
+    }
+
+    40% {
+        transform: scale(1.02);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .btn {
+        animation: button-pop var(--animation-btn, 0.25s) ease-out;
+    }
+}

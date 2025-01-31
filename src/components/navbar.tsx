@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
                     {MENU.map(({ id, name, route }) => (
                         <Link
                             key={id}
-                            className="btn btn-primary btn-ghost btn-sm rounded-btn cursor-pointer font-normal"
+                            className="btn btn-primary btn-ghost rounded-btn cursor-pointer font-normal"
                             activeStyle={{ fontWeight: 700 }}
                             to={route}
                             spy={true}
@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuShow, showMenu }) => {
                     {MENU.map(({ id, name, route }) => (
                         <Link
                             id={'navbarMenu' + id.toString()}
-                            className="btn btn-sm btn-primary btn-ghost rounded-btn cursor-pointer font-normal"
+                            className="btn btn-primary btn-ghost rounded-btn cursor-pointer font-normal"
                             activeStyle={{ fontWeight: 700 }}
                             key={id}
                             to={route}

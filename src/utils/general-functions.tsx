@@ -1,3 +1,5 @@
+import { TimelineProps } from '../types/types';
+
 const GeneralFunctions = {
     stringifyArrWithSeparator: function (arr: string[], separator: string) {
         let str: string;
@@ -39,6 +41,18 @@ const GeneralFunctions = {
         var month: number = today.getMonth() + 1;
 
         return (month < 10 ? '0' + month : month) + '/' + year;
+    },
+
+    getLastSegment(url: string): string {
+        return url.substring(url.lastIndexOf('/') + 1);
+    },
+
+    getTimelineDate(timeline: TimelineProps): number {
+        return Number(GeneralFunctions.getLastSegment(timeline.end || timeline.start));
+    },
+
+    sortByDate: function (timelines: TimelineProps[]): TimelineProps[] {
+        return timelines.sort((a, b) => GeneralFunctions.getTimelineDate(b) - GeneralFunctions.getTimelineDate(a));
     }
 };
 

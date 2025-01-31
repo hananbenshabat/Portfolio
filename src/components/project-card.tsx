@@ -34,15 +34,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <p>{projectDescription}</p>
                 <div className="flex flex-wrap">
                     {tech.map((tech, techId = id) => (
-                        <div key={techId++}>
-                            <div
-                                className={`mt-4 mr-2 badge ${
-                                    id % 2 === 0
-                                        ? `text-primary-content badge-primary`
-                                        : `text-secondary-content badge-secondary`
-                                }`}>
-                                {tech}
-                            </div>
+                        <div
+                            className={`h-5 px-2 pb-[1px] mt-4 mr-2 badge ${
+                                id % 2 === 0
+                                    ? `text-primary-content badge-primary`
+                                    : `text-secondary-content badge-secondary`
+                            }`}
+                            key={techId++}>
+                            {tech}
                         </div>
                     ))}
                 </div>

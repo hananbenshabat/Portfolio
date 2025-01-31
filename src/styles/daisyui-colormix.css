@@ -1,31 +1,31 @@
 .bg-primary-focus {
-    background-color: color-mix(in oklab, oklch(var(--p)), black 7%);
+    background-color: color-mix(in oklab, var(--color-primary), black 7%);
 }
 
 .bg-secondary-focus {
-    background-color: color-mix(in oklab, oklch(var(--s)), black 7%);
+    background-color: color-mix(in oklab, var(--color-secondary), black 7%);
 }
 
 .bg-accent-focus {
-    background-color: color-mix(in oklab, oklch(var(--a)), black 7%);
+    background-color: color-mix(in oklab, var(--color-accent), black 7%);
 }
 
 .bg-neutral-focus {
-    background-color: color-mix(in oklab, oklch(var(--n)), black 7%);
+    background-color: color-mix(in oklab, var(--color-info), black 7%);
 }
 
 .text-primary-focus {
-    color: color-mix(in oklab, oklch(var(--p)), black 7%);
+    color: color-mix(in oklab, var(--color-primary), black 7%);
 }
 
 .text-secondary-focus {
-    color: color-mix(in oklab, oklch(var(--s)), black 7%);
+    color: color-mix(in oklab, var(--color-secondary), black 7%);
 }
 
 .text-accent-focus {
-    color: color-mix(in oklab, oklch(var(--a)), black 7%);
+    color: color-mix(in oklab, var(--color-accent), black 7%);
 }
 
 .text-neutral-focus {
-    color: color-mix(in oklab, oklch(var(--n)), black 7%);
+    color: color-mix(in oklab, var(--color-info), black 7%);
 }

@@ -11,7 +11,7 @@ const SkillsContainer: React.FC = () => {
                 {skills.map(({ id, skill, level }) => (
                     <AnimateVisible key={id}>
                         <div
-                            className={`p-6 space-y-2 artboard phone card ${
+                            className={`p-6 space-y-2 w-xs phone card ${
                                 id % 2 === 0
                                     ? `bg-secondary text-secondary-content`
                                     : `bg-primary-focus text-primary-content`

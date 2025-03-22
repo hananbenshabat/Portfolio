@@ -18,7 +18,6 @@ const ExperienceContainer: React.FC = () => {
                             <TimelineCard
                                 styling={i % 2 === 0 ? 'right-timeline' : 'flex-row-reverse left-timeline'}
                                 id={id}
-                                num={i}
                                 logo={logo}
                                 start={start}
                                 end={end}

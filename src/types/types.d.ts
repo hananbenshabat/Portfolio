@@ -31,7 +31,6 @@ export type MenuProps = {
 };
 export type TimelineCardProps = {
     styling: string;
-    num: number;
 } & TimelineProps;
 
 export type DrawerProps = {
